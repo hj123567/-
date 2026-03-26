@@ -1,0 +1,219 @@
+.rightSpan {
+    display: inline-block;
+    width: 80px;
+}
+
+/* 主卡片样式 */
+.main-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 页面标题样式 */
+.page-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e4e7ed;
+}
+
+.page-title h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #303133;
+}
+
+/* 信息文本样式 */
+.info-text {
+    font-size: 16px;
+    color: #303133;
+    font-weight: 500;
+}
+
+/* 卡片样式 */
+.el-card {
+    margin-bottom: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.el-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.el-card__header {
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 16px;
+    font-weight: 600;
+    color: #303133;
+}
+
+/* 床位布局样式 */
+.bed-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.bed-item {
+    border: 2px solid #e4e7ed;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.bed-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.bed-item.my-bed {
+    border-color: #409EFF;
+    background-color: #ecf5ff;
+    box-shadow: 0 4px 12px rgba(64, 158, 255, 0.2);
+}
+
+.bed-position {
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #303133;
+    font-size: 16px;
+}
+
+.bed-occupant {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f5f7fa;
+    transition: all 0.3s ease;
+}
+
+.bed-occupant:hover {
+    background-color: #ecf5ff;
+}
+
+.bed-occupant.empty {
+    color: #909399;
+    font-style: italic;
+    background-color: #f0f2f5;
+}
+
+/* 表格样式 */
+.el-table {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.el-table th {
+    background-color: #f5f7fa;
+    font-weight: 600;
+    color: #303133;
+}
+
+.el-table tr:hover {
+    background-color: #f5f7fa;
+}
+
+/* 按钮样式 */
+.el-button {
+    margin-right: 10px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.el-button:hover {
+    transform: translateY(-1px);
+}
+
+/* 标签样式 */
+.el-tag {
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* 表单样式 */
+.el-form-item {
+    margin-bottom: 20px;
+}
+
+/* 标签页样式 */
+.el-tabs {
+    margin-top: 20px;
+}
+
+.el-tabs__header {
+    margin-bottom: 20px;
+}
+
+.el-tabs__item {
+    font-size: 14px;
+    color: #606266;
+    transition: all 0.3s ease;
+}
+
+.el-tabs__item:hover {
+    color: #409EFF;
+}
+
+.el-tabs__item.is-active {
+    color: #409EFF;
+    font-weight: 600;
+}
+
+/* 评分样式 */
+.el-rate {
+    display: inline-block;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .bed-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 滚动条样式 */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
