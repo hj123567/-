@@ -1,0 +1,65 @@
+@startuml 宿舍管理员用例图
+left to right direction
+skinparam backgroundColor #FFFFFF
+skinparam actorStyle awesome
+
+actor 宿舍管理员 as DormManager
+
+rectangle 学生宿舍管理系统 {
+    usecase "用户信息查看" as UC1
+    usecase "查看学生信息" as UC2
+    usecase "编辑学生信息" as UC3
+    usecase "设置寝室长" as UC4
+    
+    usecase "日常宿舍管理" as UC5
+    usecase "管理楼宇信息" as UC6
+    usecase "管理房间信息" as UC7
+    usecase "卫生评分" as UC8
+    usecase "每天评分一次" as UC9
+    
+    usecase "日常信息管理" as UC10
+    usecase "查看公告信息" as UC11
+    usecase "处理报修信息" as UC12
+    
+    usecase "日常申请管理" as UC13
+    usecase "审批调宿申请" as UC14
+    
+    usecase "访客管理" as UC15
+    usecase "登记外来人员" as UC16
+    usecase "查看访客记录" as UC17
+    
+    usecase "水电费管理" as UC18
+    usecase "录入水电表读数" as UC19
+    usecase "生成水电费账单" as UC20
+    usecase "管理水电费账单" as UC21
+}
+
+DormManager --> UC1
+DormManager --> UC5
+DormManager --> UC10
+DormManager --> UC13
+DormManager --> UC15
+DormManager --> UC18
+
+UC1 --> UC2 : 包含
+UC1 --> UC3 : 包含
+UC1 --> UC4 : 包含
+
+UC5 --> UC6 : 包含
+UC5 --> UC7 : 包含
+UC5 --> UC8 : 包含
+UC8 --> UC9 : 包含
+
+UC10 --> UC11 : 包含
+UC10 --> UC12 : 包含
+
+UC13 --> UC14 : 包含
+
+UC15 --> UC16 : 包含
+UC15 --> UC17 : 包含
+
+UC18 --> UC19 : 包含
+UC18 --> UC20 : 包含
+UC18 --> UC21 : 包含
+
+@enduml
