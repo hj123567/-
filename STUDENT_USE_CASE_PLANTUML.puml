@@ -1,0 +1,77 @@
+@startuml 学生端用例图
+left to right direction
+skinparam backgroundColor #FFFFFF
+skinparam actorStyle awesome
+
+actor 学生 as Student
+
+rectangle 学生宿舍管理系统 {
+    usecase "我的宿舍" as UC1
+    usecase "查看宿舍信息" as UC2
+    usecase "查看室友信息" as UC3
+    usecase "查看床位安排" as UC4
+    usecase "查看报修记录" as UC5
+    usecase "查看卫生评分记录" as UC6
+    usecase "查看水电费账单" as UC7
+    usecase "一键申请调宿" as UC8
+    
+    usecase "卫生评分" as UC9
+    usecase "查看评分记录" as UC10
+    usecase "查看评分详情" as UC11
+    
+    usecase "水电费管理" as UC12
+    usecase "查看账单列表" as UC13
+    usecase "筛选账单" as UC14
+    usecase "在线缴费" as UC15
+    usecase "查看缴费状态" as UC16
+    
+    usecase "申请调宿" as UC17
+    usecase "填写调宿申请" as UC18
+    usecase "提交调宿申请" as UC19
+    usecase "查看申请状态" as UC20
+    
+    usecase "报修申请" as UC21
+    usecase "填写报修信息" as UC22
+    usecase "提交报修申请" as UC23
+    usecase "查看报修状态" as UC24
+    
+    usecase "个人信息" as UC25
+    usecase "查看个人信息" as UC26
+    usecase "编辑个人信息" as UC27
+}
+
+Student --> UC1
+Student --> UC9
+Student --> UC12
+Student --> UC17
+Student --> UC21
+Student --> UC25
+
+UC1 --> UC2 : 包含
+UC1 --> UC3 : 包含
+UC1 --> UC4 : 包含
+UC1 --> UC5 : 包含
+UC1 --> UC6 : 包含
+UC1 --> UC7 : 包含
+UC1 --> UC8 : 包含
+
+UC9 --> UC10 : 包含
+UC9 --> UC11 : 包含
+
+UC12 --> UC13 : 包含
+UC12 --> UC14 : 包含
+UC12 --> UC15 : 包含
+UC12 --> UC16 : 包含
+
+UC17 --> UC18 : 包含
+UC17 --> UC19 : 包含
+UC17 --> UC20 : 包含
+
+UC21 --> UC22 : 包含
+UC21 --> UC23 : 包含
+UC21 --> UC24 : 包含
+
+UC25 --> UC26 : 包含
+UC25 --> UC27 : 包含
+
+@enduml
